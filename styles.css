@@ -1,0 +1,55 @@
+
+fieldset {
+    display: flex;
+    gap: 1.5rem;
+}
+
+input {
+    --_inp-color: var(--inp-color, rgb(216, 187, 151));
+    box-shadow: 0 0 0.2rem rgb(216, 187, 151);
+    background-color: var(--_inp-color);
+    border: 1px solid black;
+    border-radius: var(--border-radius-inp);
+}
+
+label {
+    margin-top: .8rem;
+    display:inline-block;
+}
+
+input, select option, select, .btn-close-dialog {
+    width: 80%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.btn-close-dialog, input[type="submit"] {
+    margin-top: .5rem;
+    cursor: pointer;
+    color: #f9f9f9;
+}
+
+input[type="submit"] {
+    background-color: rgb(78, 90, 255);
+}
+
+.password {
+    display: flex;
+    gap: 3rem;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+}
+
+input.inputed:invalid {
+    border: 2px solid red;
+}
+
+
+input.inputed:valid {
+    border: 2px solid rgb(22, 235, 22);
+}

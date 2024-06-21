@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="module" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <div>
+        <h1>FORM VALIDATION</h1>
+        <form action="" id="form-validation" novalidate>
+            <fieldset>
+                <legend>Location</legend>
+                <label for="country">Country*</label>
+                <input type="text" name="country" id="country" placeholder="France" required>
+
+                <label for="zip-code">Zip Code*</label>
+                <input type="number" name="zip-code" id="zip-code" placeholder="91200" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Information</legend>
+                <label for="email">Mail*
+                    <input type="email" name="email" id="email" placeholder="example@test.com" pattern="[A-Za-z0-9]+@+[A-Za-z0-9]+\.+[a-z]{2,3}" required>
+                </label>
+            </fieldset>
+
+            <fieldset class="password">
+                <legend>Password</legend>
+                <label for="password">Password*
+                    <input type="password" name="password" id="password" placeholder="8 characters with a number" pattern="(?=.*\d).{8,}" title="Minimum of 8 characters. Should have at least one special character and one number." required> 
+                    <button type="button" id="show-pass" >Show</button> 
+                </label>
+                
+                <label for="password-conf">Confirm Password*
+                    <input type="password" name="password-conf" placeholder="Repeat your password" id="password-conf" required>
+                    <button type="button" id="show-pass-conf">Show</button>
+                </label>
+                
+            </fieldset>
+            <div id="error-pwd"></div>
+
+            <input type="submit" value="Submit" id="btn-submit-project-edit" />
+        </form>
+    </div>
+    
+</body>
+</html>
